@@ -7,6 +7,7 @@
 //
 
 #import "SHAppDelegate.h"
+#import "SHTestModal.h"
 
 @implementation SHAppDelegate
 
@@ -16,6 +17,21 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    NSDictionary *a = @{ @"string_value" : @"shan", @"another_string_value" : @"ul haq",
+                         @"INTVALUE" : @12, @"AnotherIntValue" : @23, @"integerValue" : @78, @"another_integer_value" : @98,
+                         @"numberVALUE" : @YES, @"another_numberVALUE" : @NO , @"remember" : @(false), @"do_it_my_self" : @"Yahooo", @"myArray" : @[
+                                 @"one", @2 , @NO, @"four"
+                                 ], @"_my_dictionary" : @{@"name" : @"correct name"}
+                         };
+    
+    
+    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a];
+    
+    NSLog(modal, nil);
+    
+    
     return YES;
 }
 
@@ -27,7 +43,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F22F156818BA17BE002B359F /* SHModalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F156618BA17BE002B359F /* SHModalObject.m */; };
+		F22F156B18BA2B66002B359F /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F156A18BA2B66002B359F /* SHTestModal.m */; };
 		F2B4093118BA16F400611B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093018BA16F400611B29 /* Foundation.framework */; };
 		F2B4093318BA16F400611B29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093218BA16F400611B29 /* CoreGraphics.framework */; };
 		F2B4093518BA16F400611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 		F22F156518BA17BE002B359F /* SHModalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalObject.h; sourceTree = "<group>"; };
 		F22F156618BA17BE002B359F /* SHModalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModalObject.m; sourceTree = "<group>"; };
 		F22F156718BA17BE002B359F /* SHModalSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalSerialization.h; sourceTree = "<group>"; };
+		F22F156918BA2B66002B359F /* SHTestModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTestModal.h; sourceTree = "<group>"; };
+		F22F156A18BA2B66002B359F /* SHTestModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTestModal.m; sourceTree = "<group>"; };
 		F2B4092D18BA16F400611B29 /* SHModalObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHModalObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4093018BA16F400611B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2B4093218BA16F400611B29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 				F2B4094018BA16F400611B29 /* SHAppDelegate.m */,
 				F2B4094218BA16F500611B29 /* Images.xcassets */,
 				F2B4093718BA16F400611B29 /* Supporting Files */,
+				F22F156918BA2B66002B359F /* SHTestModal.h */,
+				F22F156A18BA2B66002B359F /* SHTestModal.m */,
 			);
 			path = SHModalObject;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22F156B18BA2B66002B359F /* SHTestModal.m in Sources */,
 				F2B4093D18BA16F400611B29 /* main.m in Sources */,
 				F22F156818BA17BE002B359F /* SHModalObject.m in Sources */,
 				F2B4094118BA16F400611B29 /* SHAppDelegate.m in Sources */,

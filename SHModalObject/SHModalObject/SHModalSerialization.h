@@ -30,7 +30,7 @@
 
 /**
  *  This method will be implemented by the class that adopts this protocol and will define the logic for how to
- *  serialize the key/value pair passed to the method. the overridden method must call [super serializevalue: withKey:]
+ *  serialize the key/value pair passed to the method. the overridden method must call [super serializeValue: withKey:]
  *  to impelement the default logic for serialization for a specific key/value pair if it choose not to do any specific
  *  implementation.
  *
@@ -38,6 +38,6 @@
  *  @param key   The key object from the NSDictionary object passed to the class
  *
  */
-- (void) serializevalue:(id)value withKey:(id)key;
+- (void) serializeValue:(id)value withKey:(id)key;
 
 @end

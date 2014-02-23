@@ -99,7 +99,7 @@
     id key;
     while ((key = [enumerator nextObject])) {
         id value = [dictionary objectForKey:key];
-        [self serializevalue:value withKey:key];
+        [self serializeValue:value withKey:key];
     }
     
     free(_ivars);
@@ -117,7 +117,7 @@
 
 #pragma mark - SHModalSerialization protocol methods
 
-- (void) serializevalue:(id)value withKey:(id)key;
+- (void) serializeValue:(id)value withKey:(id)key;
 {
     //check for NSNull or nil for key
     if ([key isKindOfClass:[NSNull class]] || nil == key) {
@@ -145,7 +145,7 @@
             
             //converting the .NET JSON Date representation to either NSDate, NSTimeInterval or keeping it as NSString.
             //if somebody wants a different conversion, please simplye override the method and parse the value and set
-            //for yourself and make sure you call [super serializevalue: key:] for all other values so that they are
+            //for yourself and make sure you call [super serializeValue: key:] for all other values so that they are
             //parsed correctly.
             
             switch (_converstionOption) {

@@ -94,7 +94,7 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 
 #Tasks Pending
 
-- [ ] adding to cocoapods.
+- [X] adding to cocoapods.
 - [ ] adding support for custom instance variable types that are also subclasses of `SHModalObject`
 - [ ] implementing `NSCoding` for archiving/unarchiving the modal objects.
 - [ ] implementing a deserializer for converting the object to NSDictionary. 

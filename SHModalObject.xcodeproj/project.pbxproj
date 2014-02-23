@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22F156818BA17BE002B359F /* SHModalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F156618BA17BE002B359F /* SHModalObject.m */; };
 		F2B4093118BA16F400611B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093018BA16F400611B29 /* Foundation.framework */; };
 		F2B4093318BA16F400611B29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093218BA16F400611B29 /* CoreGraphics.framework */; };
 		F2B4093518BA16F400611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
@@ -32,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F22F156518BA17BE002B359F /* SHModalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalObject.h; sourceTree = "<group>"; };
+		F22F156618BA17BE002B359F /* SHModalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModalObject.m; sourceTree = "<group>"; };
+		F22F156718BA17BE002B359F /* SHModalSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalSerialization.h; sourceTree = "<group>"; };
 		F2B4092D18BA16F400611B29 /* SHModalObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHModalObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4093018BA16F400611B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2B4093218BA16F400611B29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F22F156418BA17BE002B359F /* SHModalObject */ = {
+			isa = PBXGroup;
+			children = (
+				F22F156518BA17BE002B359F /* SHModalObject.h */,
+				F22F156618BA17BE002B359F /* SHModalObject.m */,
+				F22F156718BA17BE002B359F /* SHModalSerialization.h */,
+			);
+			path = SHModalObject;
+			sourceTree = "<group>";
+		};
 		F2B4092418BA16F400611B29 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +121,7 @@
 		F2B4093618BA16F400611B29 /* SHModalObject */ = {
 			isa = PBXGroup;
 			children = (
+				F22F156418BA17BE002B359F /* SHModalObject */,
 				F2B4093F18BA16F400611B29 /* SHAppDelegate.h */,
 				F2B4094018BA16F400611B29 /* SHAppDelegate.m */,
 				F2B4094218BA16F500611B29 /* Images.xcassets */,
@@ -241,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B4093D18BA16F400611B29 /* main.m in Sources */,
+				F22F156818BA17BE002B359F /* SHModalObject.m in Sources */,
 				F2B4094118BA16F400611B29 /* SHAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +460,7 @@
 				F2B4095B18BA16F500611B29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2B4095C18BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModalObjectTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +469,7 @@
 				F2B4095E18BA16F500611B29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

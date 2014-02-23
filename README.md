@@ -36,7 +36,7 @@ for all the modal classes that you have in your project. you will be adding some
 
 	- (User *)initWithDictionary:(NSDictionary *)responseDictionary;
 
-Thats where SHModalObject comes in, its a Single class with basic purpose to reduce this effort and do the work for you. all you have to do is `subclass` your modal class with `SHModalObject`, so the above class becomes:
+Thats where `SHModalObject` comes in, its a Single class with basic purpose to reduce this effort and do the work for you. all you have to do is `subclass` your modal class with `SHModalObject`, so the above class becomes:
 
 
 ```objective-c
@@ -51,7 +51,7 @@ Thats where SHModalObject comes in, its a Single class with basic purpose to red
 @end
 ```
 
-and thats it. SHModalObject has a basic initializer that will take the NSDictionary and will populate all the `ivars` and `properties` for you. 
+and thats it. `SHModalObject` has a basic initializer that will take the NSDictionary and will populate all the `ivars` and `properties` for you. 
 
 just initialize the modal with provided initializers and off you go.
 
@@ -61,7 +61,7 @@ just initialize the modal with provided initializers and off you go.
 
 SHModalObject compares the keys of NSDictionary with the `ivar` or `property` names in an efficient way. while comparing the names of keys with ivars it doesnt take `_`, `-` or ` ` into account (also the case doesnt matter). so
 
-user_name OR USER_NAME or USERNAME or UserName will match with _userName or userName or UserName
+`user_name` OR `USER_NAME` OR `USERNAME` OR `UserName` will match with `_userName` OR `userName` OR `UserName`
 
 you can override `- (void)serializeValue:(id)value withKey:(id)key` method if you want to a custom logic to parse a specific key/value pair. make sure to call [super serializeValue] for the values you want to parse by default.
 
@@ -84,7 +84,7 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 
 1- Add the classes into your project
 
-2- sublcass your modals with `SHUserModal`
+2- sublcass your modals with `SHModalObject`
 
 3- initialize using the povided initializers and pass the response NSDictionary ( initWithDictionary: and other variants )
 

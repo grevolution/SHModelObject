@@ -1,4 +1,4 @@
-// SHTestModal.h
+// SHTestModal.m
 //
 // Copyright (c) 2014 Shan Ul Haq (http://grevolution.me)
 //

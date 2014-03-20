@@ -92,14 +92,14 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 
 5- thats it. off you go.
 
-#Tasks Pending
+##Tasks Pending
 
 - [X] adding to cocoapods.
 - [ ] adding support for custom instance variable types that are also subclasses of `SHModelObject`
 - [ ] implementing `NSCoding` for archiving/unarchiving the model objects.
 - [ ] implementing a deserializer for converting the object to NSDictionary. 
 
-#Contact Me
+##Contact Me
 
 Shan Ul Haq (http://grevolution.me)
 
@@ -109,6 +109,6 @@ Shan Ul Haq (http://grevolution.me)
 
 - http://sg.linkedin.com/in/grevolution/
 
-#License
+##License
 
 `SHModalObject` is available under the MIT license. See the LICENSE file for more info.

@@ -98,3 +98,14 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 - [ ] adding support for custom instance variable types that are also subclasses of `SHModelObject`
 - [ ] implementing `NSCoding` for archiving/unarchiving the model objects.
 - [ ] implementing a deserializer for converting the object to NSDictionary. 
+
+#Contact Me
+
+Shan Ul Haq (http://grevolution.me)
+	-g@grevolution.me
+	-http://twitter.com/gfg5tek
+	-http://sg.linkedin.com/in/grevolution/
+
+#License
+
+`SHModalObject` is available under the MIT license. See the LICENSE file for more info.

@@ -125,9 +125,9 @@
 			children = (
 				F244006D18DACD6B0078B6B0 /* SHModelObject */,
 				F244007118DACD6B0078B6B0 /* SHAppDelegate.m */,
-				F244007218DACD6B0078B6B0 /* Images.xcassets */,
 				F244007318DACD6B0078B6B0 /* SHAppDelegate.h */,
 				F244007418DACD6B0078B6B0 /* SHTestModal.m */,
+				F244007218DACD6B0078B6B0 /* Images.xcassets */,
 				F2B4093718BA16F400611B29 /* Supporting Files */,
 			);
 			path = SHModelObject;

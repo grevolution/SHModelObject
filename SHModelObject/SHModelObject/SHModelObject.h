@@ -21,7 +21,7 @@
 // SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "SHModalSerialization.h"
+#import "SHModelSerialization.h"
 
 /**
  *  Date option conversion enum to be passed to the serializer constructer
@@ -38,7 +38,7 @@ typedef enum {
  *  by passing a NSDictionary to it. The NSDictionary key is compared with the instance variable name and the value is 
  *  populated to the variable.
  */
-@interface SHModalObject : NSObject <SHModalSerialization>
+@interface SHModelObject : NSObject <SHModelSerialization>
 
 /**
  *  class initializer

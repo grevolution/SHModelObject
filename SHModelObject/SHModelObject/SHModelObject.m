@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import "SHModalObject.h"
+#import "SHModelObject.h"
 #import <objc/runtime.h>
 
 /**
@@ -46,7 +46,7 @@
 #define PATTERN_TO_STRIP @"-_ "
 
 
-@implementation SHModalObject
+@implementation SHModelObject
 {
     Ivar *                  _ivars;
     unsigned int            _outCount;

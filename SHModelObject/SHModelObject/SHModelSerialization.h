@@ -26,7 +26,7 @@
  *  The `SHModalSerialization` protocol is adopted by any class that will then implement how to serialize the key/value
  *  pair passed to the class.
  */
-@protocol SHModalSerialization <NSObject>
+@protocol SHModelSerialization <NSObject>
 
 /**
  *  This method will be implemented by the class that adopts this protocol and will define the logic for how to

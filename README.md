@@ -102,9 +102,9 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 #Contact Me
 
 Shan Ul Haq (http://grevolution.me)
-	-g@grevolution.me
-	-http://twitter.com/gfg5tek
-	-http://sg.linkedin.com/in/grevolution/
+	- g@grevolution.me
+	- http://twitter.com/gfg5tek
+	- http://sg.linkedin.com/in/grevolution/
 
 #License
 

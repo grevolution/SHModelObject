@@ -111,4 +111,4 @@ Shan Ul Haq (http://grevolution.me)
 
 ##License
 
-`SHModalObject` is available under the MIT license. See the LICENSE file for more info.
+`SHModelObject` is available under the MIT license. See the LICENSE file for more info.

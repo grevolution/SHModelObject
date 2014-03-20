@@ -1,6 +1,5 @@
 
 [![Build Status](https://travis-ci.org/grevolution/SHModelObject.svg?branch=master)](https://travis-ci.org/grevolution/SHModelObject)
-
 SHModelObject
 =============
 

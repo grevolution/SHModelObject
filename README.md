@@ -1,10 +1,9 @@
-
-[![Build Status](https://travis-ci.org/grevolution/SHModelObject.svg?branch=master)](https://travis-ci.org/grevolution/SHModelObject)
 SHModelObject
 =============
 
-`SHModelObject` is a utility model Base Class that uses objective-c runtime to assign the values to instance variables and properties of the model class from an `NSDictionary`, Which is a basic usecase 
-when using webservices that return JSON response.
+`SHModelObject` is a utility model Base Class that uses objective-c runtime to assign the values to instance variables and properties of the model class from an `NSDictionary`, Which is a basic usecase when using webservices that return JSON response.
+
+[![Build Status](https://travis-ci.org/grevolution/SHModelObject.svg?branch=master)](https://travis-ci.org/grevolution/SHModelObject)
 
 Let say you have a WebService that serves you back the following Response:
 

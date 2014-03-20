@@ -33,11 +33,20 @@
     [self.window makeKeyAndVisible];
     
     
-    NSDictionary *a = @{ @"string_value" : @"shan", @"another_string_value" : @"ul haq",
-                         @"INTVALUE" : @12, @"AnotherIntValue" : @23, @"integerValue" : @78, @"another_integer_value" : @98,
-                         @"numberVALUE" : @YES, @"another_numberVALUE" : @NO , @"remember" : @(false), @"do_it_my_self" : @"Yahooo", @"myArray" : @[
+    NSDictionary *a = @{ @"string_value" : @"shan",
+                         @"another_string_value" : @"ul haq",
+                         @"INTVALUE" : @12,
+                         @"AnotherIntValue" : @23,
+                         @"integerValue" : @78,
+                         @"another_integer_value" : @98,
+                         @"numberVALUE" : @YES,
+                         @"another_numberVALUE" : @NO ,
+                         @"remember" : @(false),
+                         @"do_it_my_self" : @"Yahooo",
+                         @"myArray" : @[
                                  @"one", @2 , @NO, @"four"
-                                 ], @"_my_dictionary" : @{@"name" : @"correct name"}
+                                 ],
+                         @"_my_dictionary" : @{@"name" : @"correct name"}
                          };
     
     

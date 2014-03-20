@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F22F156818BA17BE002B359F /* SHModalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F156618BA17BE002B359F /* SHModalObject.m */; };
-		F22F156B18BA2B66002B359F /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F156A18BA2B66002B359F /* SHTestModal.m */; };
+		F244007518DACD6B0078B6B0 /* SHModalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F244006F18DACD6B0078B6B0 /* SHModalObject.m */; };
+		F244007618DACD6B0078B6B0 /* SHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F244007118DACD6B0078B6B0 /* SHAppDelegate.m */; };
+		F244007718DACD6B0078B6B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F244007218DACD6B0078B6B0 /* Images.xcassets */; };
+		F244007818DACD6B0078B6B0 /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F244007418DACD6B0078B6B0 /* SHTestModal.m */; };
 		F2B4093118BA16F400611B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093018BA16F400611B29 /* Foundation.framework */; };
 		F2B4093318BA16F400611B29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093218BA16F400611B29 /* CoreGraphics.framework */; };
 		F2B4093518BA16F400611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
 		F2B4093B18BA16F400611B29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2B4093918BA16F400611B29 /* InfoPlist.strings */; };
 		F2B4093D18BA16F400611B29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4093C18BA16F400611B29 /* main.m */; };
-		F2B4094118BA16F400611B29 /* SHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4094018BA16F400611B29 /* SHAppDelegate.m */; };
-		F2B4094318BA16F500611B29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B4094218BA16F500611B29 /* Images.xcassets */; };
 		F2B4094A18BA16F500611B29 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4094918BA16F500611B29 /* XCTest.framework */; };
 		F2B4094B18BA16F500611B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093018BA16F400611B29 /* Foundation.framework */; };
 		F2B4094C18BA16F500611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
@@ -34,25 +34,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F22F156518BA17BE002B359F /* SHModalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalObject.h; sourceTree = "<group>"; };
-		F22F156618BA17BE002B359F /* SHModalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModalObject.m; sourceTree = "<group>"; };
-		F22F156718BA17BE002B359F /* SHModalSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalSerialization.h; sourceTree = "<group>"; };
-		F22F156918BA2B66002B359F /* SHTestModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTestModal.h; sourceTree = "<group>"; };
-		F22F156A18BA2B66002B359F /* SHTestModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTestModal.m; sourceTree = "<group>"; };
-		F2B4092D18BA16F400611B29 /* SHModalObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHModalObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F244006E18DACD6B0078B6B0 /* SHModalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalObject.h; sourceTree = "<group>"; };
+		F244006F18DACD6B0078B6B0 /* SHModalObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModalObject.m; sourceTree = "<group>"; };
+		F244007018DACD6B0078B6B0 /* SHModalSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModalSerialization.h; sourceTree = "<group>"; };
+		F244007118DACD6B0078B6B0 /* SHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAppDelegate.m; sourceTree = "<group>"; };
+		F244007218DACD6B0078B6B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F244007318DACD6B0078B6B0 /* SHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAppDelegate.h; sourceTree = "<group>"; };
+		F244007418DACD6B0078B6B0 /* SHTestModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTestModal.m; sourceTree = "<group>"; };
+		F2B4092D18BA16F400611B29 /* SHModelObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHModelObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4093018BA16F400611B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2B4093218BA16F400611B29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F2B4093418BA16F400611B29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F2B4093818BA16F400611B29 /* SHModalObject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHModalObject-Info.plist"; sourceTree = "<group>"; };
+		F2B4093818BA16F400611B29 /* SHModelObject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHModelObject-Info.plist"; sourceTree = "<group>"; };
 		F2B4093A18BA16F400611B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2B4093C18BA16F400611B29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F2B4093E18BA16F400611B29 /* SHModalObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHModalObject-Prefix.pch"; sourceTree = "<group>"; };
-		F2B4093F18BA16F400611B29 /* SHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAppDelegate.h; sourceTree = "<group>"; };
-		F2B4094018BA16F400611B29 /* SHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHAppDelegate.m; sourceTree = "<group>"; };
-		F2B4094218BA16F500611B29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F2B4094818BA16F500611B29 /* SHModalObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHModalObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B4093E18BA16F400611B29 /* SHModelObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHModelObject-Prefix.pch"; sourceTree = "<group>"; };
+		F2B4094818BA16F500611B29 /* SHModelObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHModelObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4094918BA16F500611B29 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F2B4095118BA16F500611B29 /* SHModalObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHModalObjectTests-Info.plist"; sourceTree = "<group>"; };
+		F2B4095118BA16F500611B29 /* SHModelObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHModelObjectTests-Info.plist"; sourceTree = "<group>"; };
 		F2B4095318BA16F500611B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2B4095518BA16F500611B29 /* SHModalObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHModalObjectTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,21 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F22F156418BA17BE002B359F /* SHModalObject */ = {
+		F244006D18DACD6B0078B6B0 /* SHModelObject */ = {
 			isa = PBXGroup;
 			children = (
-				F22F156518BA17BE002B359F /* SHModalObject.h */,
-				F22F156618BA17BE002B359F /* SHModalObject.m */,
-				F22F156718BA17BE002B359F /* SHModalSerialization.h */,
+				F244006E18DACD6B0078B6B0 /* SHModalObject.h */,
+				F244006F18DACD6B0078B6B0 /* SHModalObject.m */,
+				F244007018DACD6B0078B6B0 /* SHModalSerialization.h */,
 			);
-			path = SHModalObject;
+			path = SHModelObject;
 			sourceTree = "<group>";
 		};
 		F2B4092418BA16F400611B29 = {
 			isa = PBXGroup;
 			children = (
-				F2B4093618BA16F400611B29 /* SHModalObject */,
-				F2B4094F18BA16F500611B29 /* SHModalObjectTests */,
+				F2B4093618BA16F400611B29 /* SHModelObject */,
+				F2B4094F18BA16F500611B29 /* SHModelObjectTests */,
 				F2B4092F18BA16F400611B29 /* Frameworks */,
 				F2B4092E18BA16F400611B29 /* Products */,
 			);
@@ -104,8 +103,8 @@
 		F2B4092E18BA16F400611B29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2B4092D18BA16F400611B29 /* SHModalObject.app */,
-				F2B4094818BA16F500611B29 /* SHModalObjectTests.xctest */,
+				F2B4092D18BA16F400611B29 /* SHModelObject.app */,
+				F2B4094818BA16F500611B29 /* SHModelObjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,44 +120,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F2B4093618BA16F400611B29 /* SHModalObject */ = {
+		F2B4093618BA16F400611B29 /* SHModelObject */ = {
 			isa = PBXGroup;
 			children = (
-				F22F156418BA17BE002B359F /* SHModalObject */,
-				F2B4093F18BA16F400611B29 /* SHAppDelegate.h */,
-				F2B4094018BA16F400611B29 /* SHAppDelegate.m */,
-				F2B4094218BA16F500611B29 /* Images.xcassets */,
+				F244006D18DACD6B0078B6B0 /* SHModelObject */,
+				F244007118DACD6B0078B6B0 /* SHAppDelegate.m */,
+				F244007218DACD6B0078B6B0 /* Images.xcassets */,
+				F244007318DACD6B0078B6B0 /* SHAppDelegate.h */,
+				F244007418DACD6B0078B6B0 /* SHTestModal.m */,
 				F2B4093718BA16F400611B29 /* Supporting Files */,
-				F22F156918BA2B66002B359F /* SHTestModal.h */,
-				F22F156A18BA2B66002B359F /* SHTestModal.m */,
 			);
-			path = SHModalObject;
+			path = SHModelObject;
 			sourceTree = "<group>";
 		};
 		F2B4093718BA16F400611B29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2B4093818BA16F400611B29 /* SHModalObject-Info.plist */,
+				F2B4093818BA16F400611B29 /* SHModelObject-Info.plist */,
 				F2B4093918BA16F400611B29 /* InfoPlist.strings */,
 				F2B4093C18BA16F400611B29 /* main.m */,
-				F2B4093E18BA16F400611B29 /* SHModalObject-Prefix.pch */,
+				F2B4093E18BA16F400611B29 /* SHModelObject-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2B4094F18BA16F500611B29 /* SHModalObjectTests */ = {
+		F2B4094F18BA16F500611B29 /* SHModelObjectTests */ = {
 			isa = PBXGroup;
 			children = (
 				F2B4095518BA16F500611B29 /* SHModalObjectTests.m */,
 				F2B4095018BA16F500611B29 /* Supporting Files */,
 			);
-			path = SHModalObjectTests;
+			path = SHModelObjectTests;
 			sourceTree = "<group>";
 		};
 		F2B4095018BA16F500611B29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F2B4095118BA16F500611B29 /* SHModalObjectTests-Info.plist */,
+				F2B4095118BA16F500611B29 /* SHModelObjectTests-Info.plist */,
 				F2B4095218BA16F500611B29 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -167,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F2B4092C18BA16F400611B29 /* SHModalObject */ = {
+		F2B4092C18BA16F400611B29 /* SHModelObject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2B4095918BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModalObject" */;
+			buildConfigurationList = F2B4095918BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModelObject" */;
 			buildPhases = (
 				F2B4092918BA16F400611B29 /* Sources */,
 				F2B4092A18BA16F400611B29 /* Frameworks */,
@@ -179,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = SHModalObject;
+			name = SHModelObject;
 			productName = SHModalObject;
-			productReference = F2B4092D18BA16F400611B29 /* SHModalObject.app */;
+			productReference = F2B4092D18BA16F400611B29 /* SHModelObject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F2B4094718BA16F500611B29 /* SHModalObjectTests */ = {
+		F2B4094718BA16F500611B29 /* SHModelObjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2B4095C18BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModalObjectTests" */;
+			buildConfigurationList = F2B4095C18BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModelObjectTests" */;
 			buildPhases = (
 				F2B4094418BA16F500611B29 /* Sources */,
 				F2B4094518BA16F500611B29 /* Frameworks */,
@@ -197,9 +195,9 @@
 			dependencies = (
 				F2B4094E18BA16F500611B29 /* PBXTargetDependency */,
 			);
-			name = SHModalObjectTests;
+			name = SHModelObjectTests;
 			productName = SHModalObjectTests;
-			productReference = F2B4094818BA16F500611B29 /* SHModalObjectTests.xctest */;
+			productReference = F2B4094818BA16F500611B29 /* SHModelObjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F2B4092818BA16F400611B29 /* Build configuration list for PBXProject "SHModalObject" */;
+			buildConfigurationList = F2B4092818BA16F400611B29 /* Build configuration list for PBXProject "SHModelObject" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2B4092C18BA16F400611B29 /* SHModalObject */,
-				F2B4094718BA16F500611B29 /* SHModalObjectTests */,
+				F2B4092C18BA16F400611B29 /* SHModelObject */,
+				F2B4094718BA16F500611B29 /* SHModelObjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B4093B18BA16F400611B29 /* InfoPlist.strings in Resources */,
-				F2B4094318BA16F500611B29 /* Images.xcassets in Resources */,
+				F244007718DACD6B0078B6B0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22F156B18BA2B66002B359F /* SHTestModal.m in Sources */,
+				F244007818DACD6B0078B6B0 /* SHTestModal.m in Sources */,
 				F2B4093D18BA16F400611B29 /* main.m in Sources */,
-				F22F156818BA17BE002B359F /* SHModalObject.m in Sources */,
-				F2B4094118BA16F400611B29 /* SHAppDelegate.m in Sources */,
+				F244007518DACD6B0078B6B0 /* SHModalObject.m in Sources */,
+				F244007618DACD6B0078B6B0 /* SHAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +278,7 @@
 /* Begin PBXTargetDependency section */
 		F2B4094E18BA16F500611B29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F2B4092C18BA16F400611B29 /* SHModalObject */;
+			target = F2B4092C18BA16F400611B29 /* SHModelObject */;
 			targetProxy = F2B4094D18BA16F500611B29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -385,9 +383,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SHModalObject/SHModalObject-Prefix.pch";
-				INFOPLIST_FILE = "SHModalObject/SHModalObject-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SHModelObject/SHModelObject-Prefix.pch";
+				INFOPLIST_FILE = "SHModelObject/SHModelObject-Info.plist";
+				PRODUCT_NAME = SHModelObject;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,9 +396,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SHModalObject/SHModalObject-Prefix.pch";
-				INFOPLIST_FILE = "SHModalObject/SHModalObject-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SHModelObject/SHModelObject-Prefix.pch";
+				INFOPLIST_FILE = "SHModelObject/SHModelObject-Info.plist";
+				PRODUCT_NAME = SHModelObject;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -421,8 +419,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SHModalObjectTests/SHModalObjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SHModalObjectTests/SHModelObjectTests-Info.plist";
+				PRODUCT_NAME = SHModelObjectTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -440,8 +438,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHModalObject/SHModalObject-Prefix.pch";
-				INFOPLIST_FILE = "SHModalObjectTests/SHModalObjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SHModalObjectTests/SHModelObjectTests-Info.plist";
+				PRODUCT_NAME = SHModelObjectTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -450,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F2B4092818BA16F400611B29 /* Build configuration list for PBXProject "SHModalObject" */ = {
+		F2B4092818BA16F400611B29 /* Build configuration list for PBXProject "SHModelObject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2B4095718BA16F500611B29 /* Debug */,
@@ -459,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2B4095918BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModalObject" */ = {
+		F2B4095918BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModelObject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2B4095A18BA16F500611B29 /* Debug */,
@@ -468,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2B4095C18BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModalObjectTests" */ = {
+		F2B4095C18BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModelObjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2B4095D18BA16F500611B29 /* Debug */,

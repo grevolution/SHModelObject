@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2B4092C18BA16F400611B29"
-               BuildableName = "SHModalObject.app"
-               BlueprintName = "SHModalObject"
-               ReferencedContainer = "container:SHModalObject.xcodeproj">
+               BuildableName = "SHModelObject.app"
+               BlueprintName = "SHModelObject"
+               ReferencedContainer = "container:SHModelObject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2B4094718BA16F500611B29"
-               BuildableName = "SHModalObjectTests.xctest"
-               BlueprintName = "SHModalObjectTests"
-               ReferencedContainer = "container:SHModalObject.xcodeproj">
+               BuildableName = "SHModelObjectTests.xctest"
+               BlueprintName = "SHModelObjectTests"
+               ReferencedContainer = "container:SHModelObject.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F2B4092C18BA16F400611B29"
-            BuildableName = "SHModalObject.app"
-            BlueprintName = "SHModalObject"
-            ReferencedContainer = "container:SHModalObject.xcodeproj">
+            BuildableName = "SHModelObject.app"
+            BlueprintName = "SHModelObject"
+            ReferencedContainer = "container:SHModelObject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F2B4092C18BA16F400611B29"
-            BuildableName = "SHModalObject.app"
-            BlueprintName = "SHModalObject"
-            ReferencedContainer = "container:SHModalObject.xcodeproj">
+            BuildableName = "SHModelObject.app"
+            BlueprintName = "SHModelObject"
+            ReferencedContainer = "container:SHModelObject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F2B4092C18BA16F400611B29"
-            BuildableName = "SHModalObject.app"
-            BlueprintName = "SHModalObject"
-            ReferencedContainer = "container:SHModalObject.xcodeproj">
+            BuildableName = "SHModelObject.app"
+            BlueprintName = "SHModelObject"
+            ReferencedContainer = "container:SHModelObject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -52,7 +52,7 @@
     
     SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a];
     
-    NSLog(modal, nil);
+    NSLog([modal description], nil);
     
     
     return YES;

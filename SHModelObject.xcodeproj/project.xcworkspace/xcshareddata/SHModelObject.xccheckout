@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8DAF904D-32FC-4C86-8D41-A3411C576901</string>
+	<string>9DE4911E-4957-4F30-B892-61F2E6812059</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SHModelObject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>A8786BEC-248F-4126-ADD9-5550FA99CD87</key>
-		<string>https://github.com/grevolution/SHModalObject.git</string>
+		<key>35F320BD-5827-4179-8696-C57E84417A71</key>
+		<string>https://github.com/grevolution/SHModelObject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SHModelObject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>A8786BEC-248F-4126-ADD9-5550FA99CD87</key>
+		<key>35F320BD-5827-4179-8696-C57E84417A71</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/grevolution/SHModalObject.git</string>
+	<string>https://github.com/grevolution/SHModelObject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A8786BEC-248F-4126-ADD9-5550FA99CD87</string>
+	<string>35F320BD-5827-4179-8696-C57E84417A71</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A8786BEC-248F-4126-ADD9-5550FA99CD87</string>
+			<string>35F320BD-5827-4179-8696-C57E84417A71</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SHModelObject</string>
 		</dict>

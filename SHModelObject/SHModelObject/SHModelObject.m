@@ -57,14 +57,25 @@
 //
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary
 {
-    if(nil == dictionary) {
+    if(nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
+	
+	if([dictionary isKindOfClass:[NSNull class]]) {
+		return nil;
+	}
     return [[[self class] alloc] initWithDictionary:dictionary];
 }
 
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
 {
+    if(nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+	
+	if([dictionary isKindOfClass:[NSNull class]]) {
+		return nil;
+	}
     return [[[self class] alloc] initWithDictionary:dictionary dateConversionOption:option];
 }
 

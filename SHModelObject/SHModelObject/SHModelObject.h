@@ -32,6 +32,14 @@ typedef enum {
     kDateConverstionFromNSStringToNSTimeIntervalOption  = 2       //convert NSString to NSTimeInterval
 } kDateConversionOption;
 
+/**
+ *  enum for identifying the input date type.
+ */
+typedef NS_ENUM(int, kInputDateFormat) {
+    kInputDateFormatJSON                    =0,
+    kInputDateFormatDotNetSimple            = 1,
+    kInputDateFormatDotNetWithTimeZone      = 2
+};
 
 /**
  *  The `SHModalSerializer` is a base class that uses objective-c runtime to populate a modal class instance variables
@@ -54,10 +62,12 @@ typedef enum {
  *
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date type.
+ *  @param inputDateType `kInputDateFormat` to determine what what is the input format of the date.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
  */
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
+                     inputDateType:(kInputDateFormat)inputDateType;
 
 
 /**
@@ -74,11 +84,12 @@ typedef enum {
  *
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date type.
+ *  @param inputDateType `kInputDateFormat` to determine what what is the input format of the date.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
  */
-+ (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option;
-
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
+                       inputDateType:(kInputDateFormat)inputDateType;
 
 /**
  *  update the instance with new dictionary values
@@ -94,11 +105,12 @@ typedef enum {
  *
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date type.
+ *  @param inputDateType `kInputDateFormat` to determine what what is the input format of the date.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
  */
-- (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option;;
-
+- (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
+                       inputDateType:(kInputDateFormat)inputDateType;
 @end
 
 

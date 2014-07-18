@@ -46,11 +46,14 @@
                          @"myArray" : @[
                                  @"one", @2 , @NO, @"four"
                                  ],
-                         @"_my_dictionary" : @{@"name" : @"correct name"}
+                         @"_my_dictionary" : @{@"name" : @"correct name"},
+                         @"time1" : @"2014-04-11T23:59:00+08:00",
+                         @"time1" : @"2014-04-11T23:59:00+08:00",
+                         @"time1" : @"2014-04-11T23:59:00+08:00",
                          };
     
     
-    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a];
+    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a dateConversionOption:kDateConverstionFromNSStringToNSTimeIntervalOption inputDateType:kInputDateFormatDotNetWithTimeZone];
     
     NSLog([modal description], nil);
     

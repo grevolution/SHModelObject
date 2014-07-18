@@ -45,12 +45,15 @@
 // pattern to strip from the dictionary key and ivarname for comparision
 #define PATTERN_TO_STRIP @"-_ "
 
+static NSDateFormatter*        _simpleDateFormatter;
+static NSDateFormatter*        _timezoneDateFormatter;
 
 @implementation SHModelObject
 {
     Ivar *                  _ivars;
     unsigned int            _outCount;
     kDateConversionOption   _converstionOption;
+    kInputDateFormat        _inputDateFormat;
 }
 
 #pragma mark - Factory methods for object creation
@@ -67,7 +70,7 @@
     return [[[self class] alloc] initWithDictionary:dictionary];
 }
 
-+ (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option inputDateType:(kInputDateFormat)inputDateType;
 {
     if(nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
         return nil;
@@ -76,7 +79,7 @@
 	if([dictionary isKindOfClass:[NSNull class]]) {
 		return nil;
 	}
-    return [[[self class] alloc] initWithDictionary:dictionary dateConversionOption:option];
+    return [[[self class] alloc] initWithDictionary:dictionary dateConversionOption:option inputDateType:inputDateType];
 }
 
 
@@ -84,16 +87,16 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 {
     if((self = [super init])) {
-        return [self updateWithDictionary:dictionary dateConversionOption:kDateConverstionFromNSStringToNSStringOption];
+        return [self updateWithDictionary:dictionary dateConversionOption:kDateConverstionFromNSStringToNSStringOption inputDateType:kInputDateFormatJSON];
     }
     return self;
 }
 
 //
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option inputDateType:(kInputDateFormat)inputDateType;
 {
     if((self = [super init])) {
-        return [self updateWithDictionary:dictionary dateConversionOption:option];
+        return [self updateWithDictionary:dictionary dateConversionOption:option inputDateType:inputDateType];
     }
     return self;
 }
@@ -120,9 +123,21 @@
 }
 
 //
-- (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option;
+- (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option inputDateType:(kInputDateFormat)inputDateType;
 {
     _converstionOption = option;
+    _inputDateFormat = inputDateType;
+    
+    if(nil == _simpleDateFormatter) {
+        _simpleDateFormatter = [[NSDateFormatter alloc] init];
+        [_simpleDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    }
+    
+    if(nil == _timezoneDateFormatter) {
+        _timezoneDateFormatter = [[NSDateFormatter alloc] init];
+        [_timezoneDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    }
+    
     return [self updateWithDictionary:dictionary];
 }
 
@@ -162,16 +177,42 @@
             switch (_converstionOption) {
                 case kDateConverstionFromNSStringToNSDateOption: {
                     if([ivarType contains:@"NSDate"]) {
-                        value = (NSDate *)[self dateFromDotNetJSONString:value];
+                        switch (_inputDateFormat) {
+                            case kInputDateFormatJSON: {
+                                value = (NSDate *)[self dateFromDotNetJSONString:value];
+                            } break;
+                            case kInputDateFormatDotNetSimple: {
+                                value = (NSDate *)[_simpleDateFormatter dateFromString:value];
+                            } break;
+                            case kInputDateFormatDotNetWithTimeZone: {
+                                value = (NSDate *)[_timezoneDateFormatter dateFromString:value];
+                            } break;
+                            default: {
+                                value = (NSDate *)[self dateFromDotNetJSONString:value];
+                            } break;
+                        }
                     } else {
                         NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSDate");
                     }
                 } break;
                 case kDateConverstionFromNSStringToNSTimeIntervalOption: {
                     if(![ivarType contains:@"@"]) {
-                        value = @([[self dateFromDotNetJSONString:value] timeIntervalSince1970]);
+                        switch (_inputDateFormat) {
+                            case kInputDateFormatJSON: {
+                                value = @([[self dateFromDotNetJSONString:value] timeIntervalSince1970]);
+                            } break;
+                            case kInputDateFormatDotNetSimple: {
+                                value = @([[_simpleDateFormatter dateFromString:value] timeIntervalSince1970]);
+                            } break;
+                            case kInputDateFormatDotNetWithTimeZone: {
+                                value = @([[_timezoneDateFormatter dateFromString:value] timeIntervalSince1970]);
+                            } break;
+                            default: {
+                                value = @([[self dateFromDotNetJSONString:value] timeIntervalSince1970]);
+                            } break;
+                        }
                     } else {
-                        NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSDate");
+                        NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSTimeInterval");
                     }
                 } break;
                 case kDateConverstionFromNSStringToNSStringOption:

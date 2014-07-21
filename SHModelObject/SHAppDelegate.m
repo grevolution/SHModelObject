@@ -57,8 +57,16 @@
                                             dateConversionOption:kDateConverstionFromNSStringToNSDateOption
                                                    inputDateType:kInputDateFormatDotNetWithTimeZone mappings:mapping];
     
-    NSLog([modal description], nil);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
     
+    BOOL isArchived = [NSKeyedArchiver archiveRootObject:modal toFile:filePath];
+    SHTestModal *unarchived = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+
+    NSLog([modal description], nil);
+    NSLog([unarchived description], nil);
+
     
     return YES;
 }

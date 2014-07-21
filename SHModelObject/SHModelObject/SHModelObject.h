@@ -46,7 +46,7 @@ typedef NS_ENUM(int, kInputDateFormat) {
  *  by passing a NSDictionary to it. The NSDictionary key is compared with the instance variable name and the value is 
  *  populated to the variable.
  */
-@interface SHModelObject : NSObject <SHModelSerialization>
+@interface SHModelObject : NSObject <SHModelSerialization, NSCoding>
 
 /**
  *  class initializer

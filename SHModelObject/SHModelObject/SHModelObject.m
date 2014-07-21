@@ -109,6 +109,54 @@ static NSDateFormatter*        _timezoneDateFormatter;
     return self;
 }
 
+// NSCoding
+- (NSArray *)propertyNames
+{
+    NSMutableArray *array = [NSMutableArray array];
+
+    //List of ivars
+    id class = objc_getClass([NSStringFromClass([self class]) UTF8String]);
+    _ivars = class_copyIvarList(class, &_outCount);
+    
+    //If it match our ivar name, then set it
+    for (unsigned int i = 0; i < _outCount; i++)
+    {
+        Ivar ivar = _ivars[i];
+        NSString *ivarName = [NSString stringWithCString:ivar_getName(ivar) encoding:NSUTF8StringEncoding];
+        [array addObject:ivarName];
+    }
+    
+    free(_ivars);
+    _ivars = NULL;    
+    return array;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [self init]))
+    {
+        // Loop through the properties
+        for (NSString *key in [self propertyNames])
+        {
+            // Decode the property, and use the KVC setValueForKey: method to set it
+            id value = [aDecoder decodeObjectForKey:key];
+            [self setValue:value forKey:key];
+        }
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    // Loop through the properties
+    for (NSString *key in [self propertyNames])
+    {
+        // Use the KVC valueForKey: method to get the property and then encode it
+        id value = [self valueForKey:key];
+        [aCoder encodeObject:value forKey:key];
+    }
+}
+
 //
 - (instancetype)updateWithDictionary:(NSDictionary *)dictionary;
 {

@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9DE4911E-4957-4F30-B892-61F2E6812059</string>
+	<string>BBC6A4B8-4768-465C-B90C-4197CE7B15FD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SHModelObject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>35F320BD-5827-4179-8696-C57E84417A71</key>
-		<string>https://github.com/grevolution/SHModelObject.git</string>
+		<key>454FEFC7-BFFF-4DA5-B089-6B427C2C7510</key>
+		<string>https://github.com/ndduy/SHModelObject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SHModelObject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>35F320BD-5827-4179-8696-C57E84417A71</key>
+		<key>454FEFC7-BFFF-4DA5-B089-6B427C2C7510</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/grevolution/SHModelObject.git</string>
+	<string>https://github.com/ndduy/SHModelObject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>35F320BD-5827-4179-8696-C57E84417A71</string>
+	<string>454FEFC7-BFFF-4DA5-B089-6B427C2C7510</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>35F320BD-5827-4179-8696-C57E84417A71</string>
+			<string>454FEFC7-BFFF-4DA5-B089-6B427C2C7510</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SHModelObject</string>
 		</dict>

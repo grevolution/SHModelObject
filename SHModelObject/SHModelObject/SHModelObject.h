@@ -67,8 +67,8 @@ typedef NS_ENUM(int, kInputDateFormat) {
  *  @return object of type instancetype populated with the values from `dictionary`
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
-                     inputDateType:(kInputDateFormat)inputDateType;
-
+                     inputDateType:(kInputDateFormat)inputDateType
+                          mappings:(NSDictionary *)dateValueMapping;
 
 /**
  *  static variant of class initializer with nil check for the dictionary passed
@@ -89,7 +89,8 @@ typedef NS_ENUM(int, kInputDateFormat) {
  *  @return object of type instancetype populated with the values from `dictionary`
  */
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
-                       inputDateType:(kInputDateFormat)inputDateType;
+                       inputDateType:(kInputDateFormat)inputDateType
+                            mappings:(NSDictionary *)dateValueMapping;
 
 /**
  *  update the instance with new dictionary values
@@ -110,7 +111,8 @@ typedef NS_ENUM(int, kInputDateFormat) {
  *  @return object of type instancetype populated with the values from `dictionary`
  */
 - (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
-                       inputDateType:(kInputDateFormat)inputDateType;
+                       inputDateType:(kInputDateFormat)inputDateType
+                            mappings:(NSDictionary *)dateValueMapping;
 @end
 
 

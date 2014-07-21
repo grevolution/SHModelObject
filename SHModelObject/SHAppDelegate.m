@@ -48,12 +48,14 @@
                                  ],
                          @"_my_dictionary" : @{@"name" : @"correct name"},
                          @"time1" : @"2014-04-11T23:59:00+08:00",
-                         @"time1" : @"2014-04-11T23:59:00+08:00",
-                         @"time1" : @"2014-04-11T23:59:00+08:00",
+                         @"time2" : @"2014-04-11T23:59:00+08:00",
+                         @"time3" : @"2014-04-11T23:59:00+08:00",
                          };
     
-    
-    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a dateConversionOption:kDateConverstionFromNSStringToNSTimeIntervalOption inputDateType:kInputDateFormatDotNetWithTimeZone];
+    NSDictionary *mapping = @{@"time1":@"",@"time2":@"",@"time3":@""};
+    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a
+                                            dateConversionOption:kDateConverstionFromNSStringToNSDateOption
+                                                   inputDateType:kInputDateFormatDotNetWithTimeZone mappings:mapping];
     
     NSLog([modal description], nil);
     

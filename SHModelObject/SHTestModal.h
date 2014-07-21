@@ -35,7 +35,7 @@
     NSMutableArray *_myArray;
     NSMutableDictionary *_myDictionary;
     
-    NSTimeInterval time1;
+    NSDate *time1;
 }
 
 @property (nonatomic, strong) NSString *stringValue;

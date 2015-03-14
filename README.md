@@ -95,7 +95,7 @@ for example, following JSON
 	"person_id" : 123,
 	"image" : {
 		"image_id" : 234,
-		"image_url" : http://image_url,
+		"image_url" : "http://image_url",
 		"orientation" : "portrait"
 	}
 }

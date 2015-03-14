@@ -68,7 +68,7 @@ typedef NS_ENUM(int, kInputDateFormat) {
  */
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
                      inputDateType:(kInputDateFormat)inputDateType
-                          mappings:(NSDictionary *)dateValueMapping;
+                          mappings:(NSDictionary *)mapping;
 
 /**
  *  static variant of class initializer with nil check for the dictionary passed
@@ -80,17 +80,30 @@ typedef NS_ENUM(int, kInputDateFormat) {
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary;
 
 /**
+ *  static variant of class initializer with nil check for the dictionary passed and mapping dictionary
+ *  this will use the default date conversion options (kDateConverstionFromNSStringToNSStringOption and
+ *  kInputDateFormatJSON)
+ *
+ *  @param dictionary dictionary containing key/value pairs for the object
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
+ *
+ *  @return object of type instancetype populated with the values from `dictionary`
+ */
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary mappings:(NSDictionary *)mapping;
+
+/**
  *  static variant of class initializer with nil check for the dictionary passed
  *
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date type.
  *  @param inputDateType `kInputDateFormat` to determine what what is the input format of the date.
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
  */
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
                        inputDateType:(kInputDateFormat)inputDateType
-                            mappings:(NSDictionary *)dateValueMapping;
+                            mappings:(NSDictionary *)mapping;
 
 /**
  *  update the instance with new dictionary values
@@ -107,12 +120,13 @@ typedef NS_ENUM(int, kInputDateFormat) {
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date type.
  *  @param inputDateType `kInputDateFormat` to determine what what is the input format of the date.
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
  */
 - (instancetype)updateWithDictionary:(NSDictionary *)dictionary dateConversionOption:(kDateConversionOption)option
                        inputDateType:(kInputDateFormat)inputDateType
-                            mappings:(NSDictionary *)dateValueMapping;
+                            mappings:(NSDictionary *)mapping;
 @end
 
 

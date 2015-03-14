@@ -33,7 +33,7 @@
     [self.window makeKeyAndVisible];
     
     
-    NSDictionary *a = @{ @"string_value" : @"shan",
+    NSDictionary *aDictionary = @{ @"string_value" : @"shan",
                          @"another_string_value" : @"ul haq",
                          @"INTVALUE" : @12,
                          @"AnotherIntValue" : @23,
@@ -72,19 +72,18 @@
                                  ]
                          };
     
-    NSDictionary *mapping = @{@"time1":@"",@"time2":@"",@"time3":@"", @"arrayOfAnotherModels" : @"SHAnotherModel"};
-    SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a
-                                            dateConversionOption:kDateConverstionFromNSStringToNSDateOption
-                                                   inputDateType:kInputDateFormatDotNetWithTimeZone mappings:mapping];
+    NSDictionary *mapping = @{@"arrayOfAnotherModels" : @"SHAnotherModel"};
     
+    SHTestModal *model = [SHTestModal objectWithDictionary:aDictionary dateConversionOption:kDateConverstionFromNSStringToNSTimeIntervalOption inputDateType:kInputDateFormatDotNetWithTimeZone mappings:mapping];
+
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectoryPath = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
     
-    BOOL isArchived = [NSKeyedArchiver archiveRootObject:modal toFile:filePath];
+    BOOL isArchived = [NSKeyedArchiver archiveRootObject:model toFile:filePath];
     SHTestModal *unarchived = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
 
-    NSLog([modal description], nil);
+    NSLog([model description], nil);
     NSLog([unarchived description], nil);
 
     

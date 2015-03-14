@@ -3,7 +3,7 @@ SHModelObject
 
 `SHModelObject` is a utility model Base Class that uses objective-c runtime to assign the values to instance variables and properties of the model class from an `NSDictionary`, Which is a basic usecase when using webservices that return JSON response.
 
-[![Build Status](https://travis-ci.org/grevolution/SHModelObject.svg?branch=master)](https://travis-ci.org/grevolution/SHModelObject)
+[![Build Status](https://img.shields.io/travis/grevolution/SHModelObject.svg?branch=master)](https://travis-ci.org/grevolution/SHModelObject) [![Pod Version](https://img.shields.io/cocoapods/v/SHModelObject.svg)](https://img.shields.io/cocoapods/v/SHModelObject.svg) [![License](https://img.shields.io/cocoapods/l/SHModelObject.svg)](https://img.shields.io/cocoapods/l/SHModelObject.svg)
 
 Let say you have a WebService that serves you back the following Response:
 
@@ -79,7 +79,110 @@ you can override `- (void)serializeValue:(id)value withKey:(id)key` method if yo
 
 ##Parsing .NET JSON Dates to NSDate or NSTimeInterval
 
-you can use `kDateConversionOption` to convert the .NET JSON Date Strings to either `NSDate` or `NSTimeInterval` or keep it as `NSString` and parse yourself.
+you can use `kDateConversionOption` to convert the .NET JSON Date Strings to either `NSDate` or `NSTimeInterval` or keep it as `NSString` and parse yourself and also you can define `kInputDateFormat` to specify your input date format (JSON format, .NET Simple or .NET with timezone)
+
+
+##Parsing instance variables which are also a subclass of `SHModelObject` 
+
+you dont have to do anything :). `SHModelObject` automatically handles it. checkout the sample code.
+
+for example, following JSON
+
+```
+
+{
+	"name" : "Shan Ul Haq",
+	"person_id" : 123,
+	"image" : {
+		"image_id" : 234,
+		"image_url" : http://image_url,
+		"orientation" : "portrait"
+	}
+}
+
+```
+will be automatically parsed into following object:
+
+```
+@interface Person : SHModelObject
+
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic) int personId;
+@property(nonatomic, strong) Image *image;
+
+@end
+```
+where Image object is also a `SHModelObject`
+
+```
+@interface Image : SHModelObject
+
+@property(nonatomic) int imageId;
+@property(nonatomic, strong) NSString *imageUrl;
+@property(nonatomic, strong) NSString *orientation;
+
+@end
+```
+
+###Parsing arrays of objects which are a subclass of `SHModelObject`
+
+similar to parsing `SHModelObject` instance variables, arrays can be handled too. you need to specify the mapping which will define that the JSON array consist of which object type.
+
+for example, if you have following JSON
+
+```
+{ 
+     "aKey" : "aValue",
+     "arrayOfModels" : [
+             {
+                 "modelId" : 2,
+                 "modelName" : "My Model 2",
+                 "modelType" : "My Model Type 2"
+                 },{
+                 "modelId" : 3,
+                 "modelName" : "My Model 3",
+                 "modelType" : "My Model Type 3"
+                 },{
+                 "modelId" : 4,
+                 "modelName" : "My Model 4",
+                 "modelType" : "My Model Type 4"
+                 }
+             ]
+     }
+}
+
+```
+which translates to following objects.
+
+```
+@interface MyObject : SHModelObject
+
+@property(nonatomic, strong) NSString *aKey;
+@property(nonatomic, strong) NSArray *arrayOfModels;
+
+@end
+
+@interface AModel : SHModelObject
+
+@property(nonatomic) int modelId;
+@property(nonatomic, strong) NSString *modelName;
+@property(nonatomic, strong) NSString *modelType;
+
+@end
+
+
+```
+
+you can convert json like this:
+
+```
+// key is the variable name and value is the class name.
+NSDictionary *mappingDictionary = @{@"arrayOfModels" : "AModel"}; 
+
+MyObject *myObject = [MyObject objectWithDictionary:dictionary mapping:mappingDictionary];
+
+```
+
 
 ##How to Use it.
 
@@ -96,8 +199,9 @@ you can use `kDateConversionOption` to convert the .NET JSON Date Strings to eit
 ##Tasks Pending
 
 - [X] adding to cocoapods.
-- [ ] adding support for custom instance variable types that are also subclasses of `SHModelObject`
-- [ ] implementing `NSCoding` for archiving/unarchiving the model objects.
+- [X] adding support for custom instance variable types that are also subclasses of `SHModelObject`
+- [X] implementing `NSCoding` for archiving/unarchiving the model objects.
+- [X] adding support for handling arrays of custom `SHModelObject` objects.
 - [ ] implementing a deserializer for converting the object to NSDictionary. 
 
 ##Contact Me

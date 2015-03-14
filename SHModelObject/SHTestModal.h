@@ -22,6 +22,8 @@
 
 #import "SHModelObject.h"
 
+@class SHAnotherModel;
+
 @interface SHTestModal : SHModelObject
 
 {
@@ -34,7 +36,6 @@
     
     NSMutableArray *_myArray;
     NSMutableDictionary *_myDictionary;
-    
     NSDate *time1;
 }
 
@@ -42,5 +43,8 @@
 @property (nonatomic) int anotherIntValue;
 @property (nonatomic) NSInteger anotherIntegerValue;
 @property (nonatomic, strong) NSNumber *anotherNumberValue;
+@property (nonatomic, strong) SHAnotherModel *anotherModel;
+@property (nonatomic, strong) NSArray *arrayOfAnotherModels;
+
 
 @end

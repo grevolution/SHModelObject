@@ -291,17 +291,54 @@ static NSDateFormatter*        _timezoneDateFormatter;
                 NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSNumber");
             }
         } else if([value isKindOfClass:[NSDictionary class]]) {
-            if(![ivarType contains:@"Dictionary"]) {
+            NSString *typeName = [ivarType stringByReplacingOccurrencesOfString:@"@" withString:@""];
+            typeName = [typeName stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+            Class objectClass = NSClassFromString(typeName);
+            BOOL isSHModelObject = [self isSHModelObject:objectClass];
+            if(isSHModelObject){
+                value = [objectClass objectWithDictionary:value];
+            } else if(![ivarType contains:@"Dictionary"]) {
                 NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSDictionary or NSMutableDictionary");
             }
         } else if([value isKindOfClass:[NSArray class]]) {
             if(![ivarType contains:@"Array"]) {
                 NSAssert(false, @"the types do not match : %@ vs %@", ivarType, @"NSArray or NSMutableArray");
             }
+            
+            id availableMappingClass = _dateValueMappings[key];
+            if(availableMappingClass && [availableMappingClass isKindOfClass:[NSString class]]) {
+                //mapping string available.
+                Class objectClass = NSClassFromString(availableMappingClass);
+                BOOL isSHModelObject = [self isSHModelObject:objectClass];
+                if(isSHModelObject){
+                    NSMutableArray *valueArray = [NSMutableArray arrayWithCapacity:[value count]];
+                    for(id item in value){
+                        //item should be a dictionary
+                        if([item isKindOfClass:[NSDictionary class]]) {
+                            id itemObject = [objectClass objectWithDictionary:item];
+                            if(itemObject){
+                                [valueArray addObject:itemObject];
+                            }
+                        } else {
+                            NSLog(@"object %@ is not a NSDictionary object, skipping.", [item description]);
+                        }
+                    }
+                    value = valueArray;
+                }
+            }
         }
         
         [self setValue:value forKey:ivarName];
     }
+}
+
+- (BOOL)isSHModelObject:(Class)class {
+    if(class == nil)
+        return NO;
+    if(class == [SHModelObject class]){
+        return YES;
+    }
+    return [self isSHModelObject:[class superclass]];
 }
 
 #pragma mark - NSObject overriden methods

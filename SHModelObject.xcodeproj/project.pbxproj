@@ -10,7 +10,6 @@
 		F244007518DACD6B0078B6B0 /* SHModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F244006F18DACD6B0078B6B0 /* SHModelObject.m */; };
 		F244007618DACD6B0078B6B0 /* SHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F244007118DACD6B0078B6B0 /* SHAppDelegate.m */; };
 		F244007718DACD6B0078B6B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F244007218DACD6B0078B6B0 /* Images.xcassets */; };
-		F244007818DACD6B0078B6B0 /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F244007418DACD6B0078B6B0 /* SHTestModal.m */; };
 		F2B4093118BA16F400611B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093018BA16F400611B29 /* Foundation.framework */; };
 		F2B4093318BA16F400611B29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093218BA16F400611B29 /* CoreGraphics.framework */; };
 		F2B4093518BA16F400611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
@@ -21,6 +20,8 @@
 		F2B4094C18BA16F500611B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B4093418BA16F400611B29 /* UIKit.framework */; };
 		F2B4095418BA16F500611B29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2B4095218BA16F500611B29 /* InfoPlist.strings */; };
 		F2B4095618BA16F500611B29 /* SHModalObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4095518BA16F500611B29 /* SHModalObjectTests.m */; };
+		F2FA97791AB40312002B972D /* SHAnotherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FA97781AB40312002B972D /* SHAnotherModel.m */; };
+		F2FA977C1AB40377002B972D /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FA977B1AB40377002B972D /* SHTestModal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		F244007118DACD6B0078B6B0 /* SHAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAppDelegate.m; sourceTree = "<group>"; };
 		F244007218DACD6B0078B6B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F244007318DACD6B0078B6B0 /* SHAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAppDelegate.h; sourceTree = "<group>"; };
-		F244007418DACD6B0078B6B0 /* SHTestModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTestModal.m; sourceTree = "<group>"; };
 		F2B4092D18BA16F400611B29 /* SHModelObject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHModelObject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4093018BA16F400611B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2B4093218BA16F400611B29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,6 +54,10 @@
 		F2B4095118BA16F500611B29 /* SHModelObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHModelObjectTests-Info.plist"; sourceTree = "<group>"; };
 		F2B4095318BA16F500611B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2B4095518BA16F500611B29 /* SHModalObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHModalObjectTests.m; sourceTree = "<group>"; };
+		F2FA97771AB40312002B972D /* SHAnotherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAnotherModel.h; sourceTree = "<group>"; };
+		F2FA97781AB40312002B972D /* SHAnotherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAnotherModel.m; sourceTree = "<group>"; };
+		F2FA977A1AB40377002B972D /* SHTestModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTestModal.h; sourceTree = "<group>"; };
+		F2FA977B1AB40377002B972D /* SHTestModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTestModal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +130,12 @@
 				F244006D18DACD6B0078B6B0 /* SHModelObject */,
 				F244007118DACD6B0078B6B0 /* SHAppDelegate.m */,
 				F244007318DACD6B0078B6B0 /* SHAppDelegate.h */,
-				F244007418DACD6B0078B6B0 /* SHTestModal.m */,
 				F244007218DACD6B0078B6B0 /* Images.xcassets */,
 				F2B4093718BA16F400611B29 /* Supporting Files */,
+				F2FA977A1AB40377002B972D /* SHTestModal.h */,
+				F2FA977B1AB40377002B972D /* SHTestModal.m */,
+				F2FA97771AB40312002B972D /* SHAnotherModel.h */,
+				F2FA97781AB40312002B972D /* SHAnotherModel.m */,
 			);
 			path = SHModelObject;
 			sourceTree = "<group>";
@@ -258,10 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F244007818DACD6B0078B6B0 /* SHTestModal.m in Sources */,
+				F2FA97791AB40312002B972D /* SHAnotherModel.m in Sources */,
 				F2B4093D18BA16F400611B29 /* main.m in Sources */,
 				F244007518DACD6B0078B6B0 /* SHModelObject.m in Sources */,
 				F244007618DACD6B0078B6B0 /* SHAppDelegate.m in Sources */,
+				F2FA977C1AB40377002B972D /* SHTestModal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

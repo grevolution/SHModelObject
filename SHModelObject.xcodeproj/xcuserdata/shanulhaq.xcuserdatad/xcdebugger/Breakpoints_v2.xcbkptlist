@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SHModelObject/SHAppDelegate.m"
-            timestampString = "427600078.010373"
+            filePath = "SHModelObject/SHModelObject/SHModelObject.m"
+            timestampString = "448012336.337347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
+            landmarkName = "-serializeValue:withKey:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SHModelObject/SHModelObject/SHModelObject.m"
-            timestampString = "427600428.987373"
+            filePath = "SHModelObject/SHAppDelegate.m"
+            timestampString = "448012488.962849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "-serializeValue:withKey:"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

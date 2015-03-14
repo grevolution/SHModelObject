@@ -50,9 +50,29 @@
                          @"time1" : @"2014-04-11T23:59:00+08:00",
                          @"time2" : @"2014-04-11T23:59:00+08:00",
                          @"time3" : @"2014-04-11T23:59:00+08:00",
+                         @"anotherModel" : @{
+                                 @"modelId" : @1,
+                                 @"modelName" : @"My Model",
+                                 @"modelType" : @"My Model Type"
+                         },
+                         @"arrayOfAnotherModels" : @[
+                                 @{
+                                     @"modelId" : @2,
+                                     @"modelName" : @"My Model 2",
+                                     @"modelType" : @"My Model Type 2"
+                                     },@{
+                                     @"modelId" : @3,
+                                     @"modelName" : @"My Model 3",
+                                     @"modelType" : @"My Model Type 3"
+                                     },@{
+                                     @"modelId" : @4,
+                                     @"modelName" : @"My Model 4",
+                                     @"modelType" : @"My Model Type 4"
+                                     }
+                                 ]
                          };
     
-    NSDictionary *mapping = @{@"time1":@"",@"time2":@"",@"time3":@""};
+    NSDictionary *mapping = @{@"time1":@"",@"time2":@"",@"time3":@"", @"arrayOfAnotherModels" : @"SHAnotherModel"};
     SHTestModal *modal = [[SHTestModal alloc] initWithDictionary:a
                                             dateConversionOption:kDateConverstionFromNSStringToNSDateOption
                                                    inputDateType:kInputDateFormatDotNetWithTimeZone mappings:mapping];

@@ -88,7 +88,7 @@ you dont have to do anything :). `SHModelObject` automatically handles it. check
 
 for example, following JSON
 
-```
+```json
 
 {
 	"name" : "Shan Ul Haq",
@@ -103,7 +103,7 @@ for example, following JSON
 ```
 will be automatically parsed into following object:
 
-```
+```objective-c
 @interface Person : SHModelObject
 
 @property(nonatomic, strong) NSString *name;
@@ -114,7 +114,7 @@ will be automatically parsed into following object:
 ```
 where Image object is also a `SHModelObject`
 
-```
+```objective-c
 @interface Image : SHModelObject
 
 @property(nonatomic) int imageId;
@@ -130,7 +130,7 @@ similar to parsing `SHModelObject` instance variables, arrays can be handled too
 
 for example, if you have following JSON
 
-```
+```json
 { 
      "aKey" : "aValue",
      "arrayOfModels" : [
@@ -154,7 +154,7 @@ for example, if you have following JSON
 ```
 which translates to following objects.
 
-```
+```objective-c
 @interface MyObject : SHModelObject
 
 @property(nonatomic, strong) NSString *aKey;
@@ -175,7 +175,7 @@ which translates to following objects.
 
 you can convert json like this:
 
-```
+```objective-c
 // key is the variable name and value is the class name.
 NSDictionary *mappingDictionary = @{@"arrayOfModels" : "AModel"}; 
 

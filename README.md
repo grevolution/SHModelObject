@@ -150,8 +150,8 @@ for example, if you have following JSON
              ]
      }
 }
-
 ```
+
 which translates to following objects.
 
 ```objective-c
@@ -169,8 +169,6 @@ which translates to following objects.
 @property(nonatomic, strong) NSString *modelType;
 
 @end
-
-
 ```
 
 you can convert json like this:
@@ -183,12 +181,70 @@ MyObject *myObject = [MyObject objectWithDictionary:dictionary mapping:mappingDi
 
 ```
 
+##SHRealmObject
+
+Realm support out of the box. `SHRealmObject` is a sublclass of `RLMObject` from Realm. If you want to use both SHModelObject to parse your JSON responses and have RLMObject to be used with Realm database. `SHRealmObject` is they class you need. 
+
+`SHRealmObject` is identical in functionality as `SHModelObject` but also confirms with `RLMObject`. that means the it also confirms with the restriction that `RLMObject` class has. (e.g. you cannot use `NSDictionary` objects. and instead of using `NSArrays` you will use `RLMArray<T>` objects). 
+
+`RLMArray<T>` objects will also be parsed automatically for you based on the mapping dictionary provided. (check out parsing arrays section above)
+
+Following is a simple example.
+
+
+```objective-c
+@interface Person : SHRealmObject
+
+@property NSString *name;
+@property int age;
+@property RLMArray<Car> *cars;
+
+@end
+
+@implementation Person
+@end
+
+////
+
+@interface Car : SHRealmObject
+@property NSString *model;
+@end
+
+@implementation Car
+@end
+```
+
+and to add an object in Realm database.
+
+```objective-c
+RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm transactionWithBlock:^{
+        NSDictionary *d = @{
+            @"nAme" : @"Shan Ul Haq",
+            @"_AGE" : @26,
+            @"cars" : @[ @{@"moDEL" : @"Honda"}, @{@"model" : @"Toyota"} ]
+        };
+        Person *p = [Person objectWithDictionary:d mappings:@{ @"cars" : @"Car" }];
+        [realm addObject:p];
+    }];
+```
+
 
 ##How to Use it.
 
-1- Add the classes into your project
+1- add the files
 
-2- sublcass your models with `SHModelObject`
+**Using Cocoapods**
+
+- add `pod 'SHModelObject/Core'` in your Podfile if you just want to use `SHModelObject`
+- add `pod 'SHModelObject/Realm'` in your Podfile if you want to use `SHRealmObject` with Realm.
+- add `pod 'SHModelObject'` in your Podfile if you want to use both `SHModelObject` and `SHRealmObject`.
+
+**Manual**
+
+- Just add the classes into your project.
+
+2- sublcass your models with `SHModelObject` or `SHRealmObject`
 
 3- initialize using the povided initializers and pass the response NSDictionary ( initWithDictionary: and other variants )
 

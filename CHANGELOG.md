@@ -1,5 +1,9 @@
 # `SHModelObject` Changelog
 
+## 1.1.1
+
+1. addition of new class `SHRealmObject` which is a subclass of `RLMObject` from [Realm](http://realm.io/).
+
 ## 1.0.8
 
 ### New Features 

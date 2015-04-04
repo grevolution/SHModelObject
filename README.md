@@ -183,7 +183,7 @@ MyObject *myObject = [MyObject objectWithDictionary:dictionary mapping:mappingDi
 
 ##SHRealmObject
 
-[Realm!](http://realm.io/) support out of the box. `SHRealmObject` is a sublclass of `RLMObject` from Realm. If you want to use both SHModelObject to parse your JSON responses and have RLMObject to be used with Realm database. `SHRealmObject` is they class you need. 
+[Realm](http://realm.io/) support out of the box. `SHRealmObject` is a sublclass of `RLMObject` from Realm. If you want to use both SHModelObject to parse your JSON responses and have RLMObject to be used with Realm database. `SHRealmObject` is they class you need. 
 
 `SHRealmObject` is identical in functionality as `SHModelObject` but also confirms with `RLMObject`. that means the it also confirms with the restriction that `RLMObject` class has. (e.g. you cannot use `NSDictionary` objects. and instead of using `NSArrays` you will use `RLMArray<T>` objects). 
 

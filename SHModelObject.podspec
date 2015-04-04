@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         	= "SHModelObject"
-  s.version      	= "1.0.8"
+  s.version      	= "1.0.9"
   s.summary      	= "`SHModelObject` a utility class that reads NSDictionary and populates the instance variables and properties automatically."
 
   s.description  	= <<-DESC
@@ -13,11 +13,24 @@ Pod::Spec.new do |s|
   s.license      	= {:type => 'MIT'}
   s.author       	= { "Shan Ul Haq" => "g@grevolution.me" }
 
-  s.platform     	= :ios
+  s.platform     	= :ios, '7.0'
   s.source       	= { :git => "https://github.com/grevolution/SHModelObject.git", :tag => s.version }
 
   s.requires_arc	= true
   s.source_files  	= 'SHModelObject/SHModelObject/*.{h,m}'
   s.exclude_files 	= 'Classes/Exclude'
+  s.dependency 'Realm'
+
+  s.subspec 'Core' do |core|
+    core.source_files = 'SHModelObject/SHModelObject/SHModelObject.{h,m}' , 'SHModelObject/SHModelObject/SHConstants.h' , 
+    'SHModelObject/SHModelObject/SHModelSerialization.h'
+    core.platform      = :ios
+  end
+
+  s.subspec 'Realm' do |realm|
+    realm.source_files = 'SHModelObject/SHModelObject/SHRealmObject.{h,m}' , 'SHModelObject/SHModelObject/SHConstants.h' , 'SHModelObject/SHModelObject/SHModelSerialization.h'
+    realm.platform      = :ios, '7.0'
+    realm.dependency 'Realm'
+  end
 
 end

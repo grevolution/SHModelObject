@@ -24,12 +24,14 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |core|
     core.source_files = 'SHModelObject/SHModelObject/SHModelObject.{h,m}' , 'SHModelObject/SHModelObject/SHConstants.h' , 
     'SHModelObject/SHModelObject/SHModelSerialization.h'
+    core.exclude_files   = 'SHModelObject/SHModelObject/SHRealmObject.{h,m}'
     core.platform      = :ios
   end
 
   s.subspec 'Realm' do |realm|
     realm.source_files = 'SHModelObject/SHModelObject/SHRealmObject.{h,m}' , 'SHModelObject/SHModelObject/SHConstants.h' , 'SHModelObject/SHModelObject/SHModelSerialization.h'
     realm.platform      = :ios, '7.0'
+    realm.exclude_files = 'SHModelObject/SHModelObject/SHModelObject.{h,m}'
     realm.dependency 'Realm'
   end
 

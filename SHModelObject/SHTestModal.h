@@ -26,14 +26,14 @@
 
 @interface SHTestModal : SHModelObject
 
-{
+                         {
     NSString *_anotherStringValue;
-    NSNumber  *_intValue;
+    NSNumber *_intValue;
     NSInteger _integerValue;
     NSNumber *_numberValue;
     BOOL _remember;
     NSString *_doItMySelf;
-    
+
     NSMutableArray *_myArray;
     NSMutableDictionary *_myDictionary;
     NSDate *time1;
@@ -45,6 +45,5 @@
 @property (nonatomic, strong) NSNumber *anotherNumberValue;
 @property (nonatomic, strong) SHAnotherModel *anotherModel;
 @property (nonatomic, strong) NSArray *arrayOfAnotherModels;
-
 
 @end

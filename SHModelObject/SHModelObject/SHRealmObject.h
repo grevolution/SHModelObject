@@ -1,4 +1,4 @@
-// SHModelObject.h
+// SHRealmObject.h
 //
 // Copyright (c) 2014 Shan Ul Haq (http://grevolution.me)
 //
@@ -22,14 +22,15 @@
 
 #import <Foundation/Foundation.h>
 #import "SHModelSerialization.h"
+#import <RLMObject.h>
 #import "SHConstants.h"
 
 /**
- *  The `SHModelObject` is a base class that uses objective-c runtime to populate a modal class instance variables
+ *  The `SHRealmObject` is a base class that uses objective-c runtime to populate a modal class instance variables
  *  by passing a NSDictionary to it. The NSDictionary key is compared with the instance variable name and the value is
  *  populated to the variable.
  */
-@interface SHModelObject : NSObject <SHModelSerialization, NSCoding>
+@interface SHRealmObject : RLMObject <SHModelSerialization, NSCoding>
 
 /**
  *  class initializer

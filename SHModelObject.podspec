@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
   s.source       	= { :git => "https://github.com/grevolution/SHModelObject.git", :tag => s.version }
 
   s.requires_arc	= true
-  s.source_files  	= 'SHModelObject/SHModelObject/*.{h,m}'
-  s.exclude_files 	= 'Classes/Exclude'
-  s.dependency 'Realm'
+  #s.source_files  	= 'SHModelObject/SHModelObject/*.{h,m}'
+  #s.exclude_files 	= 'Classes/Exclude'
+  #s.dependency 'Realm'
 
   s.subspec 'Core' do |core|
     core.source_files = 'SHModelObject/SHModelObject/SHModelObject.{h,m}' , 'SHModelObject/SHModelObject/SHConstants.h' , 

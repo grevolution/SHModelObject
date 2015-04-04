@@ -316,7 +316,7 @@ static NSDateFormatter *_timezoneDateFormatter;
                 if (isSHRealmObject) {
 
                     NSString *propName = [ivarName substringFromIndex:1];
-                    id realmArray = objc_msgSend(self, NSSelectorFromString(propName));
+                    id realmArray = ((id (*)(id, SEL))objc_msgSend)(self, NSSelectorFromString(propName));
                     for (id item in value) {
                         // item should be a dictionary
                         if ([item isKindOfClass:[NSDictionary class]]) {

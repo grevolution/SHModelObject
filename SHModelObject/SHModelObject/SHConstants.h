@@ -13,8 +13,8 @@
  *  Date option conversion enum to be passed to the serializer constructer
  */
 typedef enum {
-    kDateConverstionFromNSStringToNSStringOption = 0, // do not convert, keep NSString as it is.
-    kDateConverstionFromNSStringToNSDateOption = 1, // convert NSString to NSDate
+    kDateConverstionFromNSStringToNSStringOption = 0,      // do not convert, keep NSString as it is.
+    kDateConverstionFromNSStringToNSDateOption = 1,        // convert NSString to NSDate
     kDateConverstionFromNSStringToNSTimeIntervalOption = 2 // convert NSString to NSTimeInterval
 } kDateConversionOption;
 
@@ -22,9 +22,10 @@ typedef enum {
  *  enum for identifying the input date type.
  */
 typedef NS_ENUM(int, kInputDateFormat) {
-    kInputDateFormatJSON = 0,
-    kInputDateFormatDotNetSimple = 1,
-    kInputDateFormatDotNetWithTimeZone = 2
+    kInputDateFormatJSON = 1,
+    kInputDateFormatDotNetSimple = 2,
+    kInputDateFormatDotNetWithTimeZone = 3,
+    kInputDateFormatCustom = -1,
 };
 
 #endif

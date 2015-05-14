@@ -119,6 +119,23 @@ static NSDateFormatter *_customFormatter;
                                            mappings:mapping];
 }
 
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary
+                dateConversionOption:(kDateConversionOption)option
+                  inputDateFormatter:(NSDateFormatter *)inputDateFormatter
+                            mappings:(NSDictionary *)mapping {
+    if (nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+
+    if ([dictionary isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    return [[[self class] alloc] initWithDictionary:dictionary
+                               dateConversionOption:option
+                                 inputDateFormatter:inputDateFormatter
+                                           mappings:mapping];
+}
+
 //
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 {
@@ -153,6 +170,19 @@ static NSDateFormatter *_customFormatter;
         return [self updateWithDictionary:dictionary
                      dateConversionOption:option
                           inputDateFormat:inputDateFormat
+                                 mappings:mapping];
+    }
+    return self;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+              dateConversionOption:(kDateConversionOption)option
+                inputDateFormatter:(NSDateFormatter *)inputDateFormatter
+                          mappings:(NSDictionary *)mapping {
+    if ((self = [super init])) {
+        return [self updateWithDictionary:dictionary
+                     dateConversionOption:option
+                       inputDateFormatter:inputDateFormatter
                                  mappings:mapping];
     }
     return self;
@@ -252,6 +282,18 @@ static NSDateFormatter *_customFormatter;
         _customFormatter = [[NSDateFormatter alloc] init];
         [_customFormatter setDateFormat:_customInputDateFormatString];
     }
+    _mappings = mapping;
+
+    return [self updateWithDictionary:dictionary];
+}
+
+- (instancetype)updateWithDictionary:(NSDictionary *)dictionary
+                dateConversionOption:(kDateConversionOption)option
+                  inputDateFormatter:(NSDateFormatter *)inputDateFormatter
+                            mappings:(NSDictionary *)mapping {
+    _converstionOption = option;
+    _inputDateFormat = kInputDateFormatCustom;
+    _customFormatter = inputDateFormatter;
     _mappings = mapping;
 
     return [self updateWithDictionary:dictionary];

@@ -1,12 +1,12 @@
 PODS:
-  - Realm (0.91.1):
-    - Realm/Headers (= 0.91.1)
-  - Realm/Headers (0.91.1)
+  - Realm (0.92.3):
+    - Realm/Headers (= 0.92.3)
+  - Realm/Headers (0.92.3)
 
 DEPENDENCIES:
   - Realm
 
 SPEC CHECKSUMS:
-  Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
+  Realm: bf604805d5e897850da488260f93889f510924b3
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.37.1

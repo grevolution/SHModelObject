@@ -61,7 +61,8 @@
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
  *type.
- *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date.
+ *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date. this will use
+ *the systemTimeZone to create the formatter
  *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
@@ -69,6 +70,23 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
               dateConversionOption:(kDateConversionOption)option
                    inputDateFormat:(NSString *)inputDateFormat
+                          mappings:(NSDictionary *)mapping;
+
+/**
+ *  class initializer
+ *
+ *  @param dictionary dictionary containing key/value pairs for the object
+ *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
+ *type.
+ *  @param inputDateFormatter NSDateFormatter object which will be used to format the input date.
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
+ *
+ *  @return object of type instancetype populated with the values from `dictionary`
+ */
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+              dateConversionOption:(kDateConversionOption)option
+                inputDateFormatter:(NSDateFormatter *)inputDateFormatter
                           mappings:(NSDictionary *)mapping;
 
 /**
@@ -114,7 +132,8 @@
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
  *type.
- *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date.
+ *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date. this will use
+ *the systemTimeZone to create the formatter
  *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
@@ -122,6 +141,22 @@
 + (instancetype)objectWithDictionary:(NSDictionary *)dictionary
                 dateConversionOption:(kDateConversionOption)option
                      inputDateFormat:(NSString *)inputDateFormat
+                            mappings:(NSDictionary *)mapping;
+
+/**
+ *  static variant of class initializer with nil check for the dictionary passed
+ *
+ *  @param dictionary dictionary containing key/value pairs for the object
+ *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
+ *type.
+ *  @param inputDateFormatter NSDateFormatter object which will be used to format the input date.
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
+ *
+ *  @return object of type instancetype populated with the values from `dictionary`
+ */
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary
+                dateConversionOption:(kDateConversionOption)option
+                  inputDateFormatter:(NSDateFormatter *)inputDateFormatter
                             mappings:(NSDictionary *)mapping;
 
 /**
@@ -155,7 +190,8 @@
  *  @param dictionary dictionary containing key/value pairs for the object
  *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
  *type.
- *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date.
+ *  @param inputDateFormat NSDateFormatter format specifier which will be used to format the input date. this will use
+ *the systemTimeZone to create the formatter
  *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
  *
  *  @return object of type instancetype populated with the values from `dictionary`
@@ -163,6 +199,22 @@
 - (instancetype)updateWithDictionary:(NSDictionary *)dictionary
                 dateConversionOption:(kDateConversionOption)option
                      inputDateFormat:(NSString *)inputDateFormat
+                            mappings:(NSDictionary *)mapping;
+
+/**
+ *  update the instance with new dictionary values
+ *
+ *  @param dictionary dictionary containing key/value pairs for the object
+ *  @param option `kDateConverstionOption` to determine what to do when the value from dictionary is a DOT.NET Date
+ *type.
+ *  @param inputDateFormatter NSDateFormatter object which will be used to format the input date.
+ *  @param mapping dictionary to define the mappings for date conversion and array <-> object.
+ *
+ *  @return object of type instancetype populated with the values from `dictionary`
+ */
+- (instancetype)updateWithDictionary:(NSDictionary *)dictionary
+                dateConversionOption:(kDateConversionOption)option
+                  inputDateFormatter:(NSDateFormatter *)inputDateFormatter
                             mappings:(NSDictionary *)mapping;
 
 @end

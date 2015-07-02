@@ -110,7 +110,7 @@ static NSDateFormatter *_customFormatter;
     if (nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
-    
+
     if ([dictionary isKindOfClass:[NSNull class]]) {
         return nil;
     }
@@ -127,7 +127,7 @@ static NSDateFormatter *_customFormatter;
     if (nil == dictionary || ![dictionary isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
-    
+
     if ([dictionary isKindOfClass:[NSNull class]]) {
         return nil;
     }
@@ -136,7 +136,6 @@ static NSDateFormatter *_customFormatter;
                                  inputDateFormatter:inputDateFormatter
                                            mappings:mapping];
 }
-
 
 //
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
@@ -189,7 +188,6 @@ static NSDateFormatter *_customFormatter;
     }
     return self;
 }
-
 
 // NSCoding
 - (NSArray *)propertyNames {
@@ -290,7 +288,7 @@ static NSDateFormatter *_customFormatter;
         [_customFormatter setDateFormat:_customInputDateFormatString];
     }
     _mappings = mapping;
-    
+
     return [self updateWithDictionary:dictionary];
 }
 
@@ -302,7 +300,7 @@ static NSDateFormatter *_customFormatter;
     _inputDateFormat = kInputDateFormatCustom;
     _customFormatter = inputDateFormatter;
     _mappings = mapping;
-    
+
     return [self updateWithDictionary:dictionary];
 }
 
@@ -351,6 +349,10 @@ static NSDateFormatter *_customFormatter;
                             case kInputDateFormatDotNetWithTimeZone: {
                                 value = (NSDate *)[_timezoneDateFormatter dateFromString:value];
                             } break;
+                            case kInputDateFormatCustom: {
+                                value = (NSDate *)[_customFormatter dateFromString:value];
+                            } break;
+
                             default: { value = (NSDate *)[self dateFromDotNetJSONString:value]; } break;
                         }
                     }
@@ -366,6 +368,9 @@ static NSDateFormatter *_customFormatter;
                             } break;
                             case kInputDateFormatDotNetWithTimeZone: {
                                 value = @([[_timezoneDateFormatter dateFromString:value] timeIntervalSince1970]);
+                            } break;
+                            case kInputDateFormatCustom: {
+                                value = @([[_customFormatter dateFromString:value] timeIntervalSince1970]);
                             } break;
                             default: {
                                 value = @([[self dateFromDotNetJSONString:value] timeIntervalSince1970]);

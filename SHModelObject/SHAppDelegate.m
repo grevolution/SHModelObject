@@ -95,7 +95,7 @@ RLM_ARRAY_TYPE(Car)
     NSLog([unarchived description], nil);
 
     // realm testing
-    [[NSFileManager defaultManager] removeItemAtPath:[RLMRealm defaultRealmPath] error:nil];
+    [[NSFileManager defaultManager] removeItemAtURL:[[[RLMRealm defaultRealm] configuration] fileURL] error:nil];
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm transactionWithBlock:^{
         NSDictionary *d = @{

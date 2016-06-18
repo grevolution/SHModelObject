@@ -1,3 +1,6 @@
 platform :ios, '7.0'
 
-pod 'Realm'
+target 'SHModelObject' do 
+	pod 'Realm'
+end
+

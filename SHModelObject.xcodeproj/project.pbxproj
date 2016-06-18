@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66D76422E11513B26933E1D3 /* libPods-SHModelObject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0DD241F9FB35F3F93B212D7 /* libPods-SHModelObject.a */; };
 		F23ED34A1ACECF1100DECB41 /* SHModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F23ED3491ACECF1100DECB41 /* SHModelObject.m */; };
 		F244007518DACD6B0078B6B0 /* SHRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F244006F18DACD6B0078B6B0 /* SHRealmObject.m */; };
 		F244007618DACD6B0078B6B0 /* SHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F244007118DACD6B0078B6B0 /* SHAppDelegate.m */; };
@@ -23,7 +24,6 @@
 		F2B4095618BA16F500611B29 /* SHModalObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4095518BA16F500611B29 /* SHModalObjectTests.m */; };
 		F2FA97791AB40312002B972D /* SHAnotherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FA97781AB40312002B972D /* SHAnotherModel.m */; };
 		F2FA977C1AB40377002B972D /* SHTestModal.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FA977B1AB40377002B972D /* SHTestModal.m */; };
-		FE33A26DADB42E2A9B70AD3A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7A64675AD7CA1B19A20D9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		554FB54EEF06419DD0589430 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		5F7A64675AD7CA1B19A20D9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF6124F63E5B13E3367BBE50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2E37114A22AF21385F13CD70 /* Pods-SHModelObject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHModelObject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHModelObject/Pods-SHModelObject.debug.xcconfig"; sourceTree = "<group>"; };
+		A11D18FAC0D2005DF68AFF60 /* Pods-SHModelObject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHModelObject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHModelObject/Pods-SHModelObject.release.xcconfig"; sourceTree = "<group>"; };
+		F0DD241F9FB35F3F93B212D7 /* libPods-SHModelObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHModelObject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23ED3481ACECF1100DECB41 /* SHModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModelObject.h; sourceTree = "<group>"; };
 		F23ED3491ACECF1100DECB41 /* SHModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModelObject.m; sourceTree = "<group>"; };
 		F23ED34B1ACF64F400DECB41 /* SHConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConstants.h; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 				F2B4093318BA16F400611B29 /* CoreGraphics.framework in Frameworks */,
 				F2B4093518BA16F400611B29 /* UIKit.framework in Frameworks */,
 				F2B4093118BA16F400611B29 /* Foundation.framework in Frameworks */,
-				FE33A26DADB42E2A9B70AD3A /* libPods.a in Frameworks */,
+				66D76422E11513B26933E1D3 /* libPods-SHModelObject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,11 +93,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69326B473AE325959E36B0F9 /* Pods */ = {
+		9CC53B38E18E241B9ED13283 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				554FB54EEF06419DD0589430 /* Pods.debug.xcconfig */,
-				BF6124F63E5B13E3367BBE50 /* Pods.release.xcconfig */,
+				2E37114A22AF21385F13CD70 /* Pods-SHModelObject.debug.xcconfig */,
+				A11D18FAC0D2005DF68AFF60 /* Pods-SHModelObject.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 				F2B4094F18BA16F500611B29 /* SHModelObjectTests */,
 				F2B4092F18BA16F400611B29 /* Frameworks */,
 				F2B4092E18BA16F400611B29 /* Products */,
-				69326B473AE325959E36B0F9 /* Pods */,
+				9CC53B38E18E241B9ED13283 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +142,7 @@
 				F2B4093218BA16F400611B29 /* CoreGraphics.framework */,
 				F2B4093418BA16F400611B29 /* UIKit.framework */,
 				F2B4094918BA16F500611B29 /* XCTest.framework */,
-				5F7A64675AD7CA1B19A20D9B /* libPods.a */,
+				F0DD241F9FB35F3F93B212D7 /* libPods-SHModelObject.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,11 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2B4095918BA16F500611B29 /* Build configuration list for PBXNativeTarget "SHModelObject" */;
 			buildPhases = (
-				90F5EDA36F268FAEB41BE27A /* Check Pods Manifest.lock */,
+				76C12C901F41E58794DEA0B3 /* 📦 Check Pods Manifest.lock */,
 				F2B4092918BA16F400611B29 /* Sources */,
 				F2B4092A18BA16F400611B29 /* Frameworks */,
 				F2B4092B18BA16F400611B29 /* Resources */,
-				34EDAE56034AE01B459D91EA /* Copy Pods Resources */,
+				D220DA26D629C2FF6DDD81B5 /* 📦 Embed Pods Frameworks */,
+				B01D7BF1DBBA78C75C6A004B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,11 +242,6 @@
 				CLASSPREFIX = SH;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = grevolution;
-				TargetAttributes = {
-					F2B4094718BA16F500611B29 = {
-						TestTargetID = F2B4092C18BA16F400611B29;
-					};
-				};
 			};
 			buildConfigurationList = F2B4092818BA16F400611B29 /* Build configuration list for PBXProject "SHModelObject" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -286,34 +282,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34EDAE56034AE01B459D91EA /* Copy Pods Resources */ = {
+		76C12C901F41E58794DEA0B3 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90F5EDA36F268FAEB41BE27A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B01D7BF1DBBA78C75C6A004B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHModelObject/Pods-SHModelObject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D220DA26D629C2FF6DDD81B5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHModelObject/Pods-SHModelObject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -446,7 +457,7 @@
 		};
 		F2B4095A18BA16F500611B29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 554FB54EEF06419DD0589430 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 2E37114A22AF21385F13CD70 /* Pods-SHModelObject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -460,7 +471,7 @@
 		};
 		F2B4095B18BA16F500611B29 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF6124F63E5B13E3367BBE50 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A11D18FAC0D2005DF68AFF60 /* Pods-SHModelObject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -476,7 +487,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SHModalObject.app/SHModalObject";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -490,7 +500,6 @@
 				);
 				INFOPLIST_FILE = "SHModalObjectTests/SHModelObjectTests-Info.plist";
 				PRODUCT_NAME = SHModelObjectTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -499,7 +508,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SHModalObject.app/SHModalObject";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -509,7 +517,6 @@
 				GCC_PREFIX_HEADER = "SHModalObject/SHModalObject-Prefix.pch";
 				INFOPLIST_FILE = "SHModalObjectTests/SHModelObjectTests-Info.plist";
 				PRODUCT_NAME = SHModelObjectTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

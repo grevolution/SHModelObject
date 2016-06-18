@@ -409,7 +409,7 @@ static NSDateFormatter *_customFormatter;
                     for (id item in value) {
                         // item should be a dictionary
                         if ([item isKindOfClass:[NSDictionary class]]) {
-                            id itemObject = [objectClass objectWithDictionary:item];
+                            id itemObject = [objectClass objectWithDictionary:item mappings:_mappings];
                             if (itemObject) {
                                 [valueArray addObject:itemObject];
                             }

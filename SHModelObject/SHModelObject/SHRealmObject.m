@@ -417,7 +417,7 @@ static NSDateFormatter *_customFormatter;
                     for (id item in value) {
                         // item should be a dictionary
                         if ([item isKindOfClass:[NSDictionary class]]) {
-                            id itemObject = [objectClass objectWithDictionary:item];
+                            id itemObject = [objectClass objectWithDictionary:item mappings:_mappings];
                             if (itemObject) {
                                 if ([realmArray respondsToSelector:@selector(addObject:)]) {
                                     [realmArray addObject:itemObject];

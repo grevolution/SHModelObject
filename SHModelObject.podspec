@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         	= "SHModelObject"
-  s.version      	= "1.1.6"
+  s.version      	= "1.1.7"
 
   s.summary      	= "`SHModelObject` a utility class that reads NSDictionary and populates the instance variables and properties automatically."
 

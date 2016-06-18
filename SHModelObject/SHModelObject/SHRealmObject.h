@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SHModelSerialization.h"
-#import <RLMObject.h>
+#import <Realm/RLMObject.h>
 #import "SHConstants.h"
 
 /**

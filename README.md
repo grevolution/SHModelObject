@@ -58,7 +58,7 @@ just initialize the model with provided initializers and off you go.
 
 	User *u = [[User alloc] initWithDictionary:responseDictionary];
 
-##How `SHModelObject` knows which value to assing to which instance variable?
+## How `SHModelObject` knows which value to assing to which instance variable?
 
 SHModelObject compares the keys of NSDictionary with the `ivar` or `property` names in an efficient way. while comparing the names of keys with ivars it doesnt take `_`, `-` or ` ` into account (also the case doesnt matter). so
 
@@ -77,12 +77,12 @@ you can override `- (void)serializeValue:(id)value withKey:(id)key` method if yo
 }
 ```
 
-##Parsing .NET JSON Dates to NSDate or NSTimeInterval
+## Parsing .NET JSON Dates to NSDate or NSTimeInterval
 
 you can use `kDateConversionOption` to convert the .NET JSON Date Strings to either `NSDate` or `NSTimeInterval` or keep it as `NSString` and parse yourself and also you can define `kInputDateFormat` to specify your input date format (JSON format, .NET Simple or .NET with timezone)
 
 
-##Parsing instance variables which are also a subclass of `SHModelObject` 
+## Parsing instance variables which are also a subclass of `SHModelObject` 
 
 you dont have to do anything :). `SHModelObject` automatically handles it. checkout the sample code.
 
@@ -124,7 +124,7 @@ where Image object is also a `SHModelObject`
 @end
 ```
 
-###Parsing arrays of objects which are a subclass of `SHModelObject`
+### Parsing arrays of objects which are a subclass of `SHModelObject`
 
 similar to parsing `SHModelObject` instance variables, arrays can be handled too. you need to specify the mapping which will define that the JSON array consist of which object type.
 
@@ -181,7 +181,7 @@ MyObject *myObject = [MyObject objectWithDictionary:dictionary mapping:mappingDi
 
 ```
 
-##SHRealmObject
+## SHRealmObject
 
 [Realm](http://realm.io/) support out of the box. `SHRealmObject` is a sublclass of `RLMObject` from Realm. If you want to use both SHModelObject to parse your JSON responses and have RLMObject to be used with Realm database. `SHRealmObject` is they class you need. 
 
@@ -230,7 +230,7 @@ RLMRealm *realm = [RLMRealm defaultRealm];
 ```
 
 
-##How to Use it.
+## How to Use it.
 
 1- add the files
 
@@ -252,7 +252,7 @@ RLMRealm *realm = [RLMRealm defaultRealm];
 
 5- thats it. off you go.
 
-##Tasks Pending
+## Tasks Pending
 
 - [X] adding to cocoapods.
 - [X] adding support for custom instance variable types that are also subclasses of `SHModelObject`
@@ -260,7 +260,7 @@ RLMRealm *realm = [RLMRealm defaultRealm];
 - [X] adding support for handling arrays of custom `SHModelObject` objects.
 - [ ] implementing a deserializer for converting the object to NSDictionary. 
 
-##Contact Me
+## Contact Me
 
 Shan Ul Haq (http://grevolution.me)
 
@@ -270,6 +270,6 @@ Shan Ul Haq (http://grevolution.me)
 
 - http://sg.linkedin.com/in/grevolution/
 
-##License
+## License
 
 `SHModelObject` is available under the MIT license. See the LICENSE file for more info.
